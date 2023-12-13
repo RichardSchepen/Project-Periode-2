@@ -21,6 +21,10 @@ a{
     color: white;
 }
 
+a:hover{
+    color: #dbff4a;
+}
+
 img{
     block-size: 500px;
     margin-block-start: 10px;
@@ -51,8 +55,8 @@ font-size: 24px;
     position: absolute;
     inset-block-start: -0px;
     inset-inline-start: -18px;
-    inline-size: 200px;
-    block-size: 85px;
+    inline-size: 180px;
+    block-size: 65px;
     margin-inline-start: 10px;
 }
 
