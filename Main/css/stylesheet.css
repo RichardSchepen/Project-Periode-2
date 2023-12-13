@@ -1,0 +1,16 @@
+body {
+    background: #006445;
+}
+.Barlow{
+    font-family: 'Barlow', sans-serif;
+}
+#navbar{
+    display: flex;
+    justify-content: left;
+    width: auto;
+    background: white;
+    margin-top: -8px;
+}
+.link{
+    margin-right: auto;
+}
