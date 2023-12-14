@@ -22,3 +22,13 @@ a{
 a:hover{
     color: #dbff4a
 }
+#demo{
+    text-align: center;
+    font-size: 60px;
+    margin-top: 45px;
+    margin-right: 275px;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Noto Sans NKo Unjoined', sans-serif;
+    color: white;
+}
