@@ -85,12 +85,24 @@ a {
     justify-content: center;
 }
 .tekst-vraag-box{
+    display: flex;
     background-color: white;
-    height: 6.25em;
-    width: 6.25em;
+    height: 23em;
+    width: 25em;
+    align-items: center;
+    border: black;
+}
+p.tekst-vraag-box{
 }
 .tekst-vraag-userinput{
     background-color: white;
     height: 7.4546875em;
     width: 7.7671875em;
+}
+#user-input{
+    display: flex;
+    flex-direction: row;
+}
+.not-visible{
+    display:none;
 }
