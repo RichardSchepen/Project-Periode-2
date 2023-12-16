@@ -5,7 +5,7 @@ let userinput4 = document.getElementById('user-input-4');
 let userinput5 = document.getElementById('user-input-5');
 let tekstvraagbox = document.getElementById('tekst-vraag-box');
 
-function Clearscreen(){
+function clearscreen(){
     tekstvraagbox.innerText = "Waar gaat je vraag over?";
     userinput1.innerText = "Datum informatie";
     userinput1.setAttribute("onclick", "datainformatie()");
@@ -29,7 +29,7 @@ function datainformatie(){
     userinput2.innerText = "Wanneer is de opendag";
     userinput2.setAttribute("onclick", "opendag()");
     userinput3.innerText = "Will je terug naar het begin?";
-    userinput3.setAttribute("onclick", "Clearscreen()");
+    userinput3.setAttribute("onclick", "clearscreen()");
     userinput4.className = "not-visible";
     userinput5.className = "not-visible";
 }
@@ -37,7 +37,7 @@ function datainformatie(){
 function schooljaar() {
     tekstvraagbox.innerText = "Het schooljaar begin Augustus 2024";
     userinput1.innerText = "Terug naar het begin";
-    userinput1.setAttribute("onclick", "Clearscreen()");
+    userinput1.setAttribute("onclick", "clearscreen()");
     userinput2.className = "not-visible";
     userinput3.className = "not-visible";
     userinput4.className = "not-visible";
@@ -46,7 +46,7 @@ function schooljaar() {
 function opendag(){
     tekstvraagbox.innerText = "De opendag is op 26 en 27 januari 2024";
     userinput1.innerText = "Terug naar het begin";
-    userinput1.setAttribute("onclick", "Clearscreen()")
+    userinput1.setAttribute("onclick", "clearscreen()")
     userinput2.className = "not-visible";
     userinput3.className = "not-visible";
     userinput4.className = "not-visible";
@@ -61,9 +61,9 @@ function softwaredev() {
     userinput3.innerText = "Wat ga je maken als softwaredeveloper";
     userinput3.setAttribute("onclick", "infodev()");
     userinput4.innerText = "Heb je al besloten om je in te schrijven voor de opleiding?"
-    userinput4.setAttribute("onclick", "inschrijven()");
+    userinput4.setAttribute("onclick", "inschrijvenvraagbox()");
     userinput5.innerText = "Wil je terug naar het begin?";
-    userinput5.setAttribute("onclick", "Clearscreen()");
+    userinput5.setAttribute("onclick", "clearscreen()");
 
 }
 function languages(){
@@ -74,8 +74,10 @@ function languages(){
     userinput2.setAttribute("onclick", "Javascript()");
     userinput3.innerText = "PhP";
     userinput3.setAttribute("onclick", "PhP()");
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
+    userinput4.innerText = "Terug naar vorige vraag";
+    userinput4.setAttribute("onclick", "softwaredev()");
+    userinput5.innerText = "Terug naar het begin";
+    userinput5.setAttribute("onclick", "clearscreen()");
 }
 function HtmlCss(){
     tekstvraagbox.innerText = "Dit zijn de eerste talen die je gaat leren. Html en CSS vormen de basis van het developen van websites. Als je meer wilt weten klik dan op een van de knoppen voor Html of Css.";
@@ -84,7 +86,7 @@ function HtmlCss(){
     userinput2.innerText = "Css";
     userinput2.setAttribute("onclick", "location.href='https://www.w3schools.com/css/default.asp'");
     userinput3.innerText = "Terug naar het begin";
-    userinput3.setAttribute("onclick", "Clearscreen()");
+    userinput3.setAttribute("onclick", "clearscreen()");
     userinput4.className = "not-visible";
     userinput5.className = "not-visible";
 }
@@ -93,7 +95,7 @@ function Javascript() {
     userinput1.innerText = "Javascript";
     userinput1.setAttribute("onclick", "location.href='https://www.w3schools.com/js/default.asp'");
     userinput2.innerText = "Terug naar het begin";
-    userinput2.setAttribute("onclick", "Clearscreen()")
+    userinput2.setAttribute("onclick", "clearscreen()")
     userinput3.className = "not-visible";
     userinput4.className = "not-visible";
     userinput5.className = "not-visible";
@@ -104,23 +106,44 @@ function PhP(){
     userinput1.setAttribute("onclick", "location.href='https://www.w3schools.com/php/default.asp'")
     userinput2.innerText = "Databases";
     userinput2.setAttribute("onclick", "location.href='https://nl.wikipedia.org/wiki/Database'");
-    userinput3.innerText = "terug naar het begin";
-    userinput3.setAttribute("onclick", "Clearscreen()")
+    userinput3.innerText = "Terug naar het begin";
+    userinput3.setAttribute("onclick", "clearscreen()")
     userinput4.className = "not-visible";
     userinput5.className = "not-visible";
 }
 function tijdopleiding(){
     tekstvraagbox.innerText = "Deze opleiding duurt 4 jaar met een mogelijkheid om het in 3 jaar te doen";
     userinput1.innerText = "Terug naar het begin";
-    userinput1.setAttribute("onclick", "Clearscreen()");
+    userinput1.setAttribute("onclick", "clearscreen()");
     userinput2.className = "not-visible";
     userinput3.className = "not-visible";
     userinput4.className = "not-visible";
     userinput5.className = "not-visible";
 }
 function infodev(){
-    tekstvraagbox.innerText = "";
+    tekstvraagbox.innerText = "Deze dingen ga je leren als software-developer";
+    userinput1.innerText = "Websites";
+    userinput1.setAttribute("onclick", "websites()");
+    userinput2.innerText = "Databases";
+    userinput2.setAttribute("onclick", "databases()");
+    userinput3.innerText = "Games";
+    userinput3.setAttribute("onclick", "games()");
+    userinput4.innerText = "Terug naar het begin";
+    userinput4.setAttribute("onclick", "clearscreen()");
+    userinput5.className = "not-visible";
+    
 }
-function inschrijven() {
-    tekstvraagbox.innerText = "";
+function inschrijvenvraagbox() {
+    tekstvraagbox.innerText = "Tof dat je je wilt inschrijven. En maak je geen zorgen je kan je voor elke opleiding inschrijven. Mocht je dus eigenlijk al een andere opleiding hebben gekozen dan kan je je alsnog daarvoor inschrijven.";
+    userinput1.innerText = "Inschrijven"
+    userinput1.setAttribute("onclick", "inschrijvenweb()");
+    userinput2.innerText = "Terug naar de vorige vraag";
+    userinput2.setAttribute("onclick", "softwaredev()");
+    userinput3.innerText = "Terug naar het begin";
+    userinput3.setAttribute("onclick", "clearscreen()")
+    userinput4.className = "not-visible";
+    userinput5.className = "not-visible";
+}
+function inschrijvenweb(){
+    window.open("https://www.techniekcollegerotterdam.nl/aanmelden");
 }
