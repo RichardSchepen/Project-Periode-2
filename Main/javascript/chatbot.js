@@ -7,6 +7,13 @@ let userinput6 = document.getElementById('user-input-6');
 let tekstvraagbox = document.getElementById('tekst-vraag-box'); // Gets the question-box element
 let gobackint = 0; // variable to check where user is for goback function to work
 
+// Setinvis makes selected elements not visible to user using css class
+function setinvis(element1,element2,element3,element4){
+    for (let i = 0; i < arguments.length; i++){
+        arguments[i].className = "not-visible";
+    }
+}
+
 /* Goback is used for when a user wants to go back a question or when a user wants to go back to the beginning.
    The int is used to keep track of where the user is so the user gets sent to the right questions*/
 function goback(userinputname1,userinputname2){
@@ -28,6 +35,7 @@ function goback(userinputname1,userinputname2){
     if (gobackint === 4){
         userinputname1.setAttribute("onclick", "languages()")
     }
+    // Makes the user go back to what do you make questions
     if (gobackint === 5){
         userinputname1.setAttribute("onclick", "infodev()");
     }
@@ -47,9 +55,7 @@ function clearscreen(){
     userinput3.innerText = "Heb je al besloten om je in te schrijven voor de opleiding?";
     userinput3.className = "tekst-vraag-userinput";
     userinput3.setAttribute("onclick", "inschrijvenvraagbox()");
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput4,userinput5,userinput6);
 }
 
 // Function to display information about dates
@@ -62,8 +68,7 @@ function dateinfo(){
     userinput1.setAttribute("onclick","datesinfo(1)");
     userinput2.innerText = "Wanneer is de opendag";
     userinput2.setAttribute("onclick", "datesinfo(2)");
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput5,userinput6);
 }
 
 // Function to display information about start school year and opendag
@@ -75,10 +80,7 @@ function datesinfo(userinputintfordatum) {
     }
     else if(userinputintfordatum === 2) {
         tekstvraagbox.innerText = "De opendag is op 26 en 27 januari 2024";}
-    userinput3.className = "not-visible";
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput3,userinput4,userinput5,userinput6)
 }
 
 // Function to display information about the software developer study
@@ -110,7 +112,7 @@ function languages(){
     userinput2.setAttribute("onclick", "Javascript()");
     userinput3.innerText = "PhP";
     userinput3.setAttribute("onclick", "PhP()");
-    userinput6.className = "not-visible"
+    setinvis(userinput6);
 }
 
 // Function that displays information about Html and Css
@@ -122,8 +124,7 @@ function HtmlCss(){
     userinput1.setAttribute("onclick", "window.open('https://www.w3schools.com/html/')");
     userinput2.innerText = "Css";
     userinput2.setAttribute("onclick", "window.open('https://www.w3schools.com/css/default.asp')");
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput5,userinput6);
 }
 
 // Function that displays information about Javascript
@@ -133,9 +134,7 @@ function Javascript() {
     tekstvraagbox.innerText = "Dit zul je in je 2de periode leren. Javascript zorgt ervoor dat een website interactief is. Deze interactie is volledig geschreven met javascript, html en css. Als je meer wilt weten klik dan op de knop Javascript.";
     userinput1.innerText = "Javascript";
     userinput1.setAttribute("onclick", "window.open('https://www.w3schools.com/js/default.asp')");
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput4,userinput5,userinput6);
 }
 
 // Function that displays information about PhP
@@ -147,8 +146,7 @@ function PhP(){
     userinput1.setAttribute("onclick", "window.open('https://www.w3schools.com/php/default.asp')");
     userinput2.innerText = "Databases";
     userinput2.setAttribute("onclick", "window.open('https://nl.wikipedia.org/wiki/Database')");
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput5,userinput6);
 }
 
 // Function that displays information about how long this study takes
@@ -156,10 +154,7 @@ function tijdopleiding(){
     gobackint = 3;
     goback(userinput1,userinput2);
     tekstvraagbox.innerText = "Deze opleiding duurt 4 jaar met een mogelijkheid om het in 3 jaar te doen";
-    userinput3.className = "not-visible";
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible"
+setinvis(userinput3,userinput4,userinput5,userinput6);
 }
 
 // Function that displays information about what you learn to make during the study
@@ -174,7 +169,7 @@ function infodev(){
     userinput3.innerText = "Games";
     userinput3.className = "tekst-vraag-userinput";
     userinput3.setAttribute("onclick", "games()");
-    userinput6.className = "not-visible";
+    setinvis(userinput6);
 }
 
 // Function that displays information about website development
@@ -182,10 +177,7 @@ function websites(){
     gobackint = 5;
     goback(userinput1,userinput2);
     tekstvraagbox.innerText = "Websites, je ziet ze overal. Als software developer leer jij hoe je de beste websites kunt maken. Van Html tot PhP. jij leert het allemaal.";
-    userinput3.className = "not-visible";
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput3,userinput4,userinput5,userinput6);
 }
 
 // Function that displays information about databases
@@ -193,22 +185,15 @@ function databases(){
     gobackint = 5;
     goback(userinput1,userinput2);
     tekstvraagbox.innerText = "Databases zijn een belangrijk onderdeel voor websites. Ze houden bij wat de prijs van een artikel is. Hoeveel er nog op vooraad is. Gebruikersgegevens. Al deze gegevens worden bijgehouden en opgeslagen in de databases van de websites.";
-    userinput3.className = "not-visible";
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput3,userinput4,userinput5,userinput6);
 }
 
 // Function that displays information about game development
 function games(){
     gobackint = 5;
-    goback();
+    goback(userinput1,userinput2);
     tekstvraagbox.innerText = "Je hebt tijdens de opleiding de mogelijkheid om game development als keuzevak te doen. Je zal dan een basis leren in game development";
-    userinput3.className = "not-visible";
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
-
+    setinvis(userinput3,userinput4,userinput5,userinput6);
 }
 
 // Function that displays information about internship
@@ -216,10 +201,7 @@ function stage(){
     gobackint = 3;
     goback(userinput1,userinput2);
     tekstvraagbox.innerText = "Je vraagt je dus af hoe het zit met stages. Je zal in je 2de jaar een half jaar stage moeten gaan lopen. Ook in je 3de leerjaar loop je een half jaar stage. Je zal hier aan het begin van je schooljaar wat meer over horen.";
-    userinput3.className = "not-visible";
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput3,userinput4,userinput5,userinput6)
 }
 
 // Function that displays information about registering to study
@@ -229,7 +211,5 @@ function inschrijvenvraagbox() {
     tekstvraagbox.innerText = "Tof dat je je wilt inschrijven. En maak je geen zorgen je kan je voor elke opleiding inschrijven. Mocht je dus eigenlijk al een andere opleiding hebben gekozen dan kan je je alsnog daarvoor inschrijven.";
     userinput1.innerText = "Inschrijven";
     userinput1.setAttribute("onclick", "window.open('https://www.techniekcollegerotterdam.nl/aanmelden');");
-    userinput4.className = "not-visible";
-    userinput5.className = "not-visible";
-    userinput6.className = "not-visible";
+    setinvis(userinput4,userinput5,userinput6);
 }
