@@ -2,9 +2,30 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="../pics/favicon-196x196.png">
 </head>
 <body>
-
+<nav id="navbar-background"><div id="navbar">
+    <a href="index.html"><img height="61" width="169" class="tcrlogo" alt="Logo TCR" src="../pics/tcrlogo.svg"></a>
+    <a class="link Barlow first-link" href="chatbot.html">Chatbot</a>
+    <a class="link Barlow" href="quiz.html">Quiz</a>
+    <a class="link Barlow" href="talenttree.html">Talenttree</a>
+    <a class="link Barlow" href="opendag.html">Opendag</a>
+    <a class="link Barlow" href="https://www.techniekcollegerotterdam.nl/kom-in-contact" target="_blank" rel="noreferrer noopener">Contact</a></div>
+</nav>
+    <div id="vraag-box-bounds">
+        <div id="vraag-box"><p id="tekst-vraag-box" class="tekst-vraag-box">Waar gaat je vraag over?</p></div>
+        <div id="user-input">
+            <button id="user-input-1" class="tekst-vraag-userinput" onclick="dateinfo()">Datum informatie</button>
+            <button id="user-input-2" class="tekst-vraag-userinput" onclick="softwaredev()">Informatie over software developer</button>
+            <button id="user-input-3" class="tekst-vraag-userinput" onclick="inschrijvenvraagbox()">Heb je al besloten om je in te schrijven voor de opleiding?</button>
+            <button id="user-input-4" class="not-visible" onclick=""></button>
+            <button id="user-input-5" class="not-visible" onclick=""></button>
+            <button id="user-input-6" class="not-visible" onclick=""></button>
+        </div>
+    </div>
+<script src="../javascript/chatbot.js"></script>
 </body>
 </html>
