@@ -1,10 +1,10 @@
-let userinput1 = document.getElementById('user-input-1'); // Gets user input 1 button element
-let userinput2 = document.getElementById('user-input-2');
-let userinput3 = document.getElementById('user-input-3');
-let userinput4 = document.getElementById('user-input-4');
-let userinput5 = document.getElementById('user-input-5');
-let userinput6 = document.getElementById('user-input-6');
-let tekstvraagbox = document.getElementById('tekst-vraag-box'); // Gets the question-box element
+const userinput1 = document.getElementById('user-input-1'); // Gets user input 1 button element
+const userinput2 = document.getElementById('user-input-2');
+const userinput3 = document.getElementById('user-input-3');
+const userinput4 = document.getElementById('user-input-4');
+const userinput5 = document.getElementById('user-input-5');
+const userinput6 = document.getElementById('user-input-6');
+const tekstvraagbox = document.getElementById('tekst-vraag-box'); // Gets the question-box element
 let gobackint = 0; // variable to check where user is for goback function to work
 
 // Setinvis makes selected elements not visible to user using css class
@@ -184,7 +184,7 @@ function websites(){
 function databases(){
     gobackint = 5;
     goback(userinput1,userinput2);
-    tekstvraagbox.innerText = "Databases zijn een belangrijk onderdeel voor websites. Ze houden bij wat de prijs van een artikel is. Hoeveel er nog op vooraad is. Gebruikersgegevens. Al deze gegevens worden bijgehouden en opgeslagen in de databases van de websites.";
+    tekstvraagbox.innerText = "Databases zijn een belangrijk onderdeel voor websites. Ze houden bij wat de prijs van een artikel is, hoeveel er nog op vooraad is, gebruikersgegevens. Al deze gegevens worden bijgehouden en opgeslagen in de databases van de websites.";
     setinvis(userinput3,userinput4,userinput5,userinput6);
 }
 

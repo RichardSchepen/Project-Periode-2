@@ -49,7 +49,6 @@ body {
 #demo{
     text-align: center;
     font-size: 3.75em;
-    margin-top: 2.8125em;
     margin-right: 17.1875em;
     font-family: 'Barlow', sans-serif;
     font-family: 'Fira Sans', sans-serif;
@@ -109,4 +108,14 @@ p.tekst-vraag-box{
 }
 .not-visible{
     display:none;
+}
+.tekst01{
+    display: flex;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Noto Sans NKo Unjoined', sans-serif;
+    color: white;
+    font-size: 16px;
+    max-width: 50%;
+    align-content: center;
 }
